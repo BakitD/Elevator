@@ -4,7 +4,10 @@ import parser
 
 def main(*args, **kwargs):
 	p = parser.Parser()
-	p.parse()
+	floors, height, speed, wait_time = p.parse()
+
+
+
 
 
 if __name__ == '__main__':

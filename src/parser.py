@@ -34,7 +34,7 @@ class Parser(object):
 			raise argparse.ArgumentTypeError("Speed should be positive float")
 		return ivalue
 
-	def check_octime(self, value):
+	def check_wait_time(self, value):
 		try:
 			ivalue = float(value)
 			if not ivalue > 0:
@@ -52,7 +52,7 @@ class Parser(object):
 							required=True, help='Distance between floors (float)')
 		parser.add_argument('-speed', action='store', dest='speed', type=self.check_speed,
 							required=True, help='Eelevator speed (float)')
-		parser.add_argument('-octime', action='store', dest='octime', type=self.check_octime,
+		parser.add_argument('-wait_time', action='store', dest='wait_time', type=self.check_wait_time,
 							required=True, help='Time between opening and closing doors (float)')
 		args = parser.parse_args()
-		return args.floors, args.height, args.speed, args.octime
+		return args.floors, args.height, args.speed, args.wait_time
