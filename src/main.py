@@ -1,13 +1,14 @@
 import os
-import parser
+
+
+from mechanism import MechanismBuilder
+from parser import Parser
 
 
 def main(*args, **kwargs):
-	p = parser.Parser()
-	floors, height, speed, wait_time = p.parse()
-
-
-
+	cmd_args = Parser()
+	mechanism = MechanismBuilder().create(cmd_args.parse())
+	mechanism.launch()
 
 
 if __name__ == '__main__':

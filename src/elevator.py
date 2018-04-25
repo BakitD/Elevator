@@ -1,5 +1,6 @@
-from enum import Enum
+import time
 
+from enum import Enum
 
 
 class States(Enum):
@@ -46,3 +47,4 @@ class Elevator(object):
 	def go(floor):
 		if not isinstance(floor, int) or floor < 0 or floor > self._floors:
 			return
+
