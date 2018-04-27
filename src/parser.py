@@ -16,6 +16,7 @@ class Parser(object):
 		self._re_call = re.compile("^call \d+$")
 
 	def parse(self, input_str):
+		input_str = str(input_str)
 		matched = self._re_call.findall(input_str) or self._re_go.findall(input_str)
 		if matched:
 			cmd, value = matched.pop().split()

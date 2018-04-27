@@ -31,3 +31,9 @@ class TestParser(unittest.TestCase):
 
 		for cmd in commands:
 			self.assertEqual((None, None), self.parser.parse(cmd))
+
+	def test_incorrect_type_argument(self):
+		commands = (1, 1.1, Parser(), set(), [])
+
+		for cmd in commands:
+			self.assertEqual((None, None), self.parser.parse(cmd))
