@@ -12,6 +12,8 @@ class States(Enum):
 
 class Elevator(object):
 
+	state = property()
+
 	def __init__(self, floors, height, speed, wait_time):
 		self.height = height
 		self.speed = speed
@@ -22,6 +24,16 @@ class Elevator(object):
 		self._state = States.closed
 		self._floor = 0
 
+	@state.getter
+	def state(self):
+		return self._state
+
+	@state.setter
+	def state(self, state):
+		if state in (States.closed, States.opened, States.passing):
+			self._state = state
+		return self._state
+
 	@property
 	def actions(self):
 		return self._actions
@@ -29,10 +41,6 @@ class Elevator(object):
 	@property
 	def floors(self):
 		return self._floors
-
-	@property
-	def state(self):
-		return self._state
 
 	@property
 	def floor(self):
