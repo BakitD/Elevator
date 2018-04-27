@@ -20,7 +20,7 @@ class TestParser(unittest.TestCase):
 				self.parser.parse('go 21')
 		)
 
-	def test_correct_incorrect(self):
+	def test_incorrect_commands(self):
 		commands = (
 			'call  100', ' call100', ' call 100 ', 'call 100 ',
 			'call a', 'call', 'c', '100', 'call 999a', 'call -1', 'call',
