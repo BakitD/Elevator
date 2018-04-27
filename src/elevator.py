@@ -20,7 +20,6 @@ class Elevator(object):
 		self.wait_time = wait_time
 
 		self._floors = floors
-		self._actions = []
 		self._state = States.closed
 		self._floor = 0
 
@@ -33,10 +32,6 @@ class Elevator(object):
 		if state in (States.closed, States.opened, States.passing):
 			self._state = state
 		return self._state
-
-	@property
-	def actions(self):
-		return self._actions
 
 	@property
 	def floors(self):

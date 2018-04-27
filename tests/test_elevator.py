@@ -25,7 +25,6 @@ class ElevatorTestCase(unittest.TestCase):
 		self.assertEqual(e.floors, self.floors)
 		self.assertEqual(e.wait_time, self.wait_time)
 		self.assertEqual(e.speed, self.speed)
-		self.assertEqual(e.actions, [])
 		self.assertEqual(e.state, States.closed)
 		self.assertEqual(e._floor, 0)
 
@@ -69,8 +68,6 @@ class ElevatorTestCase(unittest.TestCase):
 	def test_properties_change(self):
 		e = self.elevator
 
-		with self.assertRaises(AttributeError):
-			e.actions = []
 		with self.assertRaises(AttributeError):
 			e.floors = []
 		with self.assertRaises(AttributeError):
