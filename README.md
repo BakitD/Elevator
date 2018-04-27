@@ -13,10 +13,9 @@ To run program
 
 > `python src/main.py -floors FLOORS -height HEIGHT -speed SPEED -wait_time`
 
-To specify arguments possible values
+To get information about arguments format
 
 > `python src/main.py -h`
-
 
 To run tests
 
