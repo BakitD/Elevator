@@ -1,4 +1,5 @@
 
+
 class Application(object):
 	def __init__(self, elevator, parser):
 		self._elevator = elevator
@@ -16,4 +17,4 @@ class Application(object):
 		flag = True
 		while flag:
 			command, value = self._parser.parse(input())
-			break
+			print(command, value)
