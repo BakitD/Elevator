@@ -30,7 +30,7 @@ To run tests
 
 ### Output example
 
-'''
+```
 >> call 0
 Elevator opened doors on the 0 floor
 Waiting with opened doors !
@@ -59,4 +59,4 @@ Waiting with opened doors !
 Waiting with opened doors !
 Doors are closed !
 >> 
-'''
+```
