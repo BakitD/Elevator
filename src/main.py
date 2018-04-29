@@ -4,7 +4,7 @@ import os
 from argparser import ArgParser
 from app import Application
 from elevator import Elevator
-from parser import Parser
+from cmdparser import Parser
 
 
 def main():

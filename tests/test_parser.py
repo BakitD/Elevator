@@ -1,7 +1,7 @@
 import unittest
 
 
-from src.parser import Parser, Action
+from src.cmdparser import Parser, Action
 
 
 class TestParser(unittest.TestCase):
@@ -11,12 +11,12 @@ class TestParser(unittest.TestCase):
 
 	def test_correct_commands(self):
 		self.assertEqual(
-				(Action.call, '100500'),
+				(Action.call, 100500),
 				self.parser.parse('call 100500')
 		)
 
 		self.assertEqual(
-				(Action.go, '21'),
+				(Action.go, 21),
 				self.parser.parse('go 21')
 		)
 

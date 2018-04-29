@@ -13,6 +13,7 @@ class States(Enum):
 class Elevator(object):
 
 	state = property()
+	floor = property()
 
 	def __init__(self, floors, height, speed, wait_time):
 		self.height = height
@@ -37,17 +38,18 @@ class Elevator(object):
 	def floors(self):
 		return self._floors
 
-	@property
+	@floor.getter
 	def floor(self):
+		return self._floor
+
+	@floor.setter
+	def floor(self, floor):
+		if 0 <= floor <= self._floors:
+			self._floor = floor
 		return self._floor
 
 	def possible_floors(self):
 		return 0, self._floors
 
-	def call(self, floor):
-		if not isinstance(floor, int) or floor < 0 or floor > self._floors:
-			return
-
-	def go(floor):
-		if not isinstance(floor, int) or floor < 0 or floor > self._floors:
-			return
+	def destination_time(self, floors):
+		return (floors * self.height) / self.speed

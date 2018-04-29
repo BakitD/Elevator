@@ -9,6 +9,10 @@
 
 > `cd Elevator`
 
+> `export PYTHONPATH=PATH_TO_ELEVATOR_DIR`
+
+where PATH_TO_ELEVATOR_DIR - absolute path to ~/.../Elevator dir
+
 To run program
 
 > `python src/main.py -floors FLOORS -height HEIGHT -speed SPEED -wait_time`
@@ -19,4 +23,4 @@ To get information about arguments format
 
 To run tests
 
-> `python -m unittest tests/*.py`
+> `python -m unittest -v tests/*.py`

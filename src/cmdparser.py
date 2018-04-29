@@ -20,5 +20,5 @@ class Parser(object):
 		matched = self._re_call.findall(input_str) or self._re_go.findall(input_str)
 		if matched:
 			cmd, value = matched.pop().split()
-			return Action.go if cmd == 'go' else Action.call, value
+			return Action.go if cmd == 'go' else Action.call, int(value)
 		return None, None

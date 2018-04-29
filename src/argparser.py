@@ -37,7 +37,7 @@ class ArgParser(object):
 	def check_wait_time(self, value):
 		try:
 			ivalue = float(value)
-			if not ivalue > 0:
+			if not ivalue >= 1:
 				raise Exception
 		except Exception:
 			raise argparse.ArgumentTypeError("Time between opening and closing door should be positive float")

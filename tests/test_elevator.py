@@ -70,5 +70,3 @@ class ElevatorTestCase(unittest.TestCase):
 
 		with self.assertRaises(AttributeError):
 			e.floors = []
-		with self.assertRaises(AttributeError):
-			e.floor = []
