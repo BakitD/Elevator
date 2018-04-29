@@ -28,6 +28,19 @@ To run tests
 > `python -m unittest -v tests/*.py`
 
 
+### Syntax of the commands
+
+To call elevator input
+
+> `call FLOOR_NUM`
+
+To go to the specific floor input
+
+> `go FLOOR_NUM`
+
+FLOOR_NUM - integer
+
+
 ### Output example
 
 ```
